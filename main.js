@@ -1,3 +1,3 @@
 import "./style.css";
-
-document.querySelector("#app").innerHTML = ``;
+import { router } from "./src/routes/router";
+router.resolve();
