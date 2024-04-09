@@ -1,4 +1,4 @@
-import { El } from "@/utils/EL";
+import { El } from "../utils/EL.js";
 
 export function Loginpage() {
   return El({

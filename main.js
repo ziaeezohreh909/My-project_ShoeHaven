@@ -1,3 +1,4 @@
+import { Onboarding } from "./src/pages/onboarding";
 import "./style.css";
-import { router } from "./src/routes/router";
-router.resolve();
+
+document.querySelector("#app").append(Onboarding());
