@@ -1,15 +1,14 @@
 export function PageOneOnboarding() {
-  document.getElementById("app").style.fontFamily = "Inter";
   const logoDiv = document.createElement("div");
   logoDiv.classList.add(
     "flex",
     "justify-center",
-    "border-none",
+    "items-center",
     "mx-auto",
     "gap-2",
-    "h-[63px]",
-    "w-[231px]",
-    "mt-[240px]"
+    "h-full",
+    "sm:w-full",
+    "mt-60"
   );
   const imgDiv = document.createElement("div");
   imgDiv.classList.add(
@@ -25,7 +24,7 @@ export function PageOneOnboarding() {
   logoDiv.append(imgDiv);
   const imagLogo = document.createElement("img");
   imagLogo.src = "./src/assets/image/logo.png";
-  imagLogo.classList.add("w-[27px]", "mx-auto", "h-[40px]");
+  imagLogo.classList.add("sm:w-[27px]", "mx-auto", "sm:h-[40px]");
   imgDiv.append(imagLogo);
   const textLogo = document.createElement("h4");
   textLogo.classList.add(
@@ -36,12 +35,11 @@ export function PageOneOnboarding() {
   );
   textLogo.innerText = "Shoea";
   logoDiv.append(textLogo);
-
   const loadingDiv = document.createElement("div");
-  loadingDiv.classList.add("flex", "justify-center", "mx-auto", "mt-64");
+  loadingDiv.classList.add("flex", "justify-center", "mx-auto");
   const imgLoading = document.createElement("img");
   imgLoading.src = "./src/assets/image/spinner-atom.png";
-  imgLoading.classList.add("w-[48px]", "h-[48px]");
+  imgLoading.classList.add("sm:w-[48px]", "sm:h-[48px]", "mt-52");
   loadingDiv.append(imgLoading);
 
   document.querySelector("#app").append(logoDiv, loadingDiv);
