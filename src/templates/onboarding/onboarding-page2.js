@@ -1,4 +1,5 @@
 export function TwoPageOnboarding() {
+  
   const divBackground = document.createElement("div");
   divBackground.classList.add(
     "bg-[url('./src/assets/image/WallpaperDog.png')]",

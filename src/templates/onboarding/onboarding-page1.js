@@ -1,4 +1,6 @@
 export function PageOneOnboarding() {
+  const divmain = document.createElement("div");
+
   const logoDiv = document.createElement("div");
   logoDiv.classList.add(
     "flex",
@@ -42,5 +44,6 @@ export function PageOneOnboarding() {
   imgLoading.classList.add("sm:w-[48px]", "sm:h-[48px]", "mt-52");
   loadingDiv.append(imgLoading);
 
-  document.querySelector("#app").append(logoDiv, loadingDiv);
+  divmain.append(logoDiv, loadingDiv);
+  return divmain;
 }
