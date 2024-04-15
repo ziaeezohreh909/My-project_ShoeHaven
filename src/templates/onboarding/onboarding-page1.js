@@ -1,6 +1,11 @@
-export function PageOneOnboarding() {
-  const divmain = document.createElement("div");
+import { router } from "../../routes/router";
 
+export function PageOneOnboarding() {
+  document.getElementById("app").style.fontFamily = "Inter";
+  const divmain = document.createElement("div");
+  setTimeout(() => {
+    router.navigate("/onboarding-page2");
+  }, 3000);
   const logoDiv = document.createElement("div");
   logoDiv.classList.add(
     "flex",

@@ -1,29 +1,22 @@
 import { PageOneOnboarding } from "../templates/onboarding/onboarding-page1";
 import { TwoPageOnboarding } from "../templates/onboarding/onboarding-page2";
-import { ThreePageOnboarding } from "../templates/onboarding/onboarding-page3";
-import { FourPageOnboarding } from "../templates/onboarding/onboarding-page4";
-import { FivePageOnboarding } from "../templates/onboarding/onboarding-page5";
+import Navigo from "navigo";
 import { ChangePage } from "../utils/change-page";
+import { StartSlider } from "../templates/onboarding/sliderpages";
+import { Home } from "../pages/home";
 
-const router = new Navigator("/");
+export const router = new Navigo();
 
-export function Router() {
-  router
-    .on("/", () => {
-      ChangePage(PageOneOnboarding);
-    })
-    .on("/onboarding-page2", () => {
-      ChangePage(TwoPageOnboarding);
-    })
-    .on("/onboarding-page3", () => {
-      ChangePage(ThreePageOnboarding);
-    })
-    .on("/onboarding-page4", () => {
-      ChangePage(FourPageOnboarding);
-    })
-    .on("/onboarding-page5", () => {
-      ChangePage(FivePageOnboarding);
-    });
-  router.resolve();
-  return router;
-}
+router
+  .on("/", () => {
+    ChangePage(PageOneOnboarding);
+  })
+  .on("/onboarding-page2", () => {
+    ChangePage(TwoPageOnboarding);
+  })
+  .on("/sliderpages", () => {
+    ChangePage(StartSlider);
+  })
+  .on("/Home", () => {
+    ChangePage(Home);
+  });

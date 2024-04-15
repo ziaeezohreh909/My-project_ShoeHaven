@@ -1,5 +1,10 @@
+import { router } from "../../routes/router";
+
 export function TwoPageOnboarding() {
-  
+  // document.getElementById("app").style.fontFamily = "Inter";
+  setTimeout(() => {
+    router.navigate("/sliderpages");
+  }, 3000);
   const divBackground = document.createElement("div");
   divBackground.classList.add(
     "bg-[url('./src/assets/image/WallpaperDog.png')]",
@@ -37,5 +42,5 @@ export function TwoPageOnboarding() {
 
   downDiv.append(welcomeText, logoText, text);
   divBackground.append(downDiv);
-  document.querySelector("#app").append(divBackground);
+  return divBackground;
 }
